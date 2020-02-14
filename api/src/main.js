@@ -6,9 +6,9 @@ import typeDefs from './schema.gql'
 const server = new ApolloServer({
   resolvers,
   typeDefs,
-  mocks: {
-    Date: () => new Date('2020-02-19T08:00:00.000Z')
-  },
+  // mocks: {
+  //   Date: () => new Date('2020-02-19T08:00:00.000Z')
+  // },
   introspection: true,
   playground: {
     settings: {

@@ -1,4 +1,5 @@
 import { UserInputError } from 'apollo-server'
+import eventsCollection from '../../data/events';
 
 /**
  * Below is an example mapping of the main frontendlove domain
@@ -15,22 +16,27 @@ import { UserInputError } from 'apollo-server'
  * It will then use the slug "vuejs-amsterdam" + "isCurrent === true" to select
  */
 
-export default {
-  Query: {
-    events: (_, params, context) => [],
-    event: async (_, { id, brandSlug }, context) => {
-      if (brandSlug) {
-        // Fetch event by brandSlug === '' + isCurrent === true
-      }
+export const events = async (_, { brandSlug }, context) => {
 
-      if (!id && !slug) {
-        throw new UserInputError('slugOrIdRequired')
-      }
-
-      return {
-
-      }
-    }
+  if (brandSlug) {
+    return eventsCollection.filter(event => event.brandSlug === brandSlug);
   }
+
+  return eventsCollection;
 }
+
+export const event = async (_, { id, brandSlug }, context) => {
+  if (!id && !brandSlug) {
+    throw new UserInputError('slugOrIdRequired')
+  }
+
+  if (brandSlug) {
+    return eventsCollection.find(event => event.brandSlug === brandSlug);
+    // Return the current event
+  }
+
+  return eventsCollection.find(event => event.id === id);
+}
+
+
 

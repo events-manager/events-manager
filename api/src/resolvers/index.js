@@ -3,7 +3,6 @@ import Date from './scalars/Date'
 
 import events from './events'
 
-
 const resolvers = {
   Date
 }

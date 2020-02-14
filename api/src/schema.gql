@@ -156,9 +156,10 @@ type Query{
     brands: [Brand]
     event(
         id: ID
+        brandSlug: String
     ): Event
     events(
-        brandId: ID
+        brandSlug: String
     ): [Event]
     speaker(
         id: ID
