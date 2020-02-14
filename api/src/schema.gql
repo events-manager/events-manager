@@ -10,7 +10,7 @@ enum ParticipantRole{
 type Label{
     id: ID
     name: String
-    createdAt: String
+    createdAt: Date
 }
 
 type Picture{
@@ -39,8 +39,8 @@ type Person{
     firstName: String
     lastName: String
     callSign: String
-    createdAt: String
-    updatedAt: String
+    createdAt: Date
+    updatedAt: Date
     picture: Picture
 }
 

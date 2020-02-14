@@ -1,7 +1,7 @@
 import { merge } from 'lodash'
 import Date from './scalars/Date'
 
-import events from './events';
+import events from './events'
 
 
 const resolvers = {

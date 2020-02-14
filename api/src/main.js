@@ -7,9 +7,7 @@ const server = new ApolloServer({
   resolvers,
   typeDefs,
   mocks: {
-    Date: () => {
-      return new Date('2020-02-19T08:00:00.000Z')
-    }
+    Date: () => new Date('2020-02-19T08:00:00.000Z')
   },
   introspection: true,
   playground: {

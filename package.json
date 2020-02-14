@@ -2,17 +2,19 @@
   "name": "@spider/conferences",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "main": "index.js",
   "scripts": {
     "dev": "npm-run-all -p dev:api dev:dashboard",
-    "dev:dashboard": "cd dashboard && npm run dev",
-    "dev:api": "cd api && npm run dev",
-    "install": "cd api && npm i && cd ../dashboard && npm i"
+    "dev:dashboard": "cd ./dashboard && npm run dev",
+    "dev:api": "cd ./api && npm run dev",
+    "install": "cd ./api && npm i && cd ../dashboard && npm i"
   },
   "author": "Chris <info@cloudspider.io>",
   "license": "ISC",
   "devDependencies": {
     "npm-run-all": "^4.1.5"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "workspaces": ["dashboard", "api"]
 }

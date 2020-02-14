@@ -6,15 +6,12 @@ import { UserInputError } from 'apollo-server'
  */
 export default {
   Query: {
-    participants: (_, { eventId }, context) => {
-      return []
-    },
-    participant: async (_, { eventId }, context) => {
+    participants: (_, { eventId }, context) => [],
+    participant: async (_, { eventId }, context) =>
       // if (!id && !slug) {
       //   throw new UserInputError(`slugOrIdRequired`)
       // }
       //
-      return {}
-    }
+      ({})
   }
 }

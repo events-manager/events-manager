@@ -15,28 +15,22 @@ import { UserInputError } from 'apollo-server'
  * It will then use the slug "vuejs-amsterdam" + "isCurrent === true" to select
  */
 
-// const dummyEvent = {
-//   id: 'dummy-id',
-//   brandSlug: 'frontend-love', // slug of the brand could be mapped via loadbalancer / nginx whatever to a domain name
-//   slug: 'frontend-love-2020', // Unique slug for this event. Not sure if needed
-//   isCurrent: true // A flag that indicates that this is the event that should be shown on for example frontenddeveloperlove.com
-// }
-
 export default {
   Query: {
-    events: (_, params, context) => {
-      return []
-    },
+    events: (_, params, context) => [],
     event: async (_, { id, brandSlug }, context) => {
-      if(brandSlug) {
+      if (brandSlug) {
         // Fetch event by brandSlug === '' + isCurrent === true
       }
 
       if (!id && !slug) {
-        throw new UserInputError(`slugOrIdRequired`)
+        throw new UserInputError('slugOrIdRequired')
       }
 
-      return {}
+      return {
+
+      }
     }
   }
 }
+

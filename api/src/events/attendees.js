@@ -6,14 +6,11 @@ import { UserInputError } from 'apollo-server'
  */
 export default {
   Query: {
-    attendees: (_, { eventId }, context) => {
-      return []
-    },
+    attendees: (_, { eventId }, context) => [],
     attendee: async (_, { id, eventId, personId }, context) => {
-
-      const canFetchByComposite = eventId && personId;
+      const canFetchByComposite = eventId && personId
       if (!canFetchByComposite && !id) {
-        throw new UserInputError(`idOrCompositeRequired`, 'Either the id field or a combination of eventId + personId are required')
+        throw new UserInputError('idOrCompositeRequired', 'Either the id field or a combination of eventId + personId are required')
       }
 
       return {}
