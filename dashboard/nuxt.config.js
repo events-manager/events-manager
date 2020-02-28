@@ -1,6 +1,5 @@
 module.exports = {
   mode: 'universal',
-
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -14,21 +13,11 @@ module.exports = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-
   loading: { color: '#fff' },
-
-  css: [
-    '@/assets/scss/reset.scss',
-  ],
-
+  css: ['@/assets/scss/reset.scss'],
   plugins: [],
-
-  buildModules: [
-
-  ],
-
+  buildModules: ['@nuxtjs/vuetify'],
   modules: [],
-
   build: {
     extend(config, ctx) {}
   }
