@@ -5,7 +5,6 @@
 </template>
 
 <script>
-
 export default {
   components: {
     PageTitle: () => import('~/components/layout/PageTitle')
@@ -13,6 +12,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>
