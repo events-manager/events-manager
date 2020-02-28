@@ -1,5 +1,6 @@
 <template>
   <main id="page">
+<<<<<<< Updated upstream
 
     <h1>Heading H1</h1>
     <h2>Heading H2</h2>
@@ -8,16 +9,24 @@
     <h5>Heading H5</h5>
     <p>Paragraph p</p>
 
+=======
+    <PageTitle title="Content" />
+>>>>>>> Stashed changes
   </main>
 </template>
 
 <script>
 
 export default {
+<<<<<<< Updated upstream
   data() {
     return {
 
     }
+=======
+  components: {
+    PageTitle: () => import('~/components/layout/PageTitle')
+>>>>>>> Stashed changes
   }
 }
 </script>
