@@ -3,10 +3,6 @@
     <main-header />
 
     <main-sidebar />
-<<<<<<< Updated upstream
-
-    <nuxt />
-=======
     <section class="content">
       <nuxt />
     </section>
@@ -51,5 +47,4 @@ h1 {
   margin-left: 110px;
   padding: 24px;
 }
->>>>>>> Stashed changes
 </style>
