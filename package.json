@@ -8,7 +8,9 @@
     "dev": "npm-run-all -p dev:api dev:dashboard",
     "dev:dashboard": "cd ./dashboard && npm run dev",
     "dev:api": "cd ./api && npm run dev",
-    "install": "cd ./api && npm i && cd ../dashboard && npm i"
+    "install": "cd ./api && yarn && cd ../dashboard && yarn",
+    "build": "cd api && yarn build",
+    "start": "cd api && yarn start"
   },
   "author": "Chris <info@cloudspider.io>",
   "license": "ISC",
