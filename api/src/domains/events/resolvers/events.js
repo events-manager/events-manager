@@ -1,5 +1,5 @@
 import { UserInputError } from 'apollo-server'
-import eventsCollection from '../../data/events';
+import eventsCollection from '../../../data/events';
 
 /**
  * Below is an example mapping of the main frontendlove domain

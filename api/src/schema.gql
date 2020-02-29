@@ -56,6 +56,7 @@ type Brand{
 
 type Event{
     id: ID
+    slug: String
     name: String
     startsAt: Date
     endsAt: Date
@@ -75,17 +76,22 @@ type Event{
 
 type Organisation{
     id: ID
+    slug: String
     name: String
+    website: String
+    sponsorships: [Sponsor]
 }
 
 type Sponsor{
     id: ID
     event: Event
     organisation: Organisation
+    level: String
 }
 
 type Venue{
     id: ID
+    slug: String
     name: String
     description: String
     organisation: [Organisation]
@@ -152,6 +158,7 @@ type Attendee{
 type Query{
     brand(
         id: ID
+        slug: String
     ): Brand
     brands: [Brand]
     event(
@@ -173,4 +180,8 @@ type Query{
     attendees(
         eventId: ID
     ): [Attendee]
+    organisation(id: ID): Organisation
+    organisations(slug: String): [Organisation]
+    person: Person
+    people: [Person]
 }
