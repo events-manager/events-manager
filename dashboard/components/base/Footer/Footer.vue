@@ -8,6 +8,7 @@
 export default {}
 </script>
 
+
 <style lang="scss" scoped>
 footer.v-footer {
   background: #eeeeee;

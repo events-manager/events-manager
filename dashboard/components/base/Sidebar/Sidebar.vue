@@ -18,6 +18,7 @@
 export default {}
 </script>
 
+
 <style lang="scss" scoped>
 nav {
   width: 110px;

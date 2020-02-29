@@ -2,9 +2,11 @@
   <div id="app">
     <main-header />
     <main-sidebar />
+
     <section class="content">
       <nuxt />
     </section>
+
     <main-footer />
   </div>
 </template>
