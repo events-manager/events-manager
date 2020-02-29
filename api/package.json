@@ -2,10 +2,12 @@
   "name": "api",
   "version": "1.0.0",
   "description": "Graphql API to manage events",
-  "main": "index.js",
+  "main": "build/main.js",
   "repository": "https://github.com/chris-visser/events-dashboard",
   "scripts": {
     "dev": "nodemon --ext js,graphql --exec babel-node src/main.js",
+    "start": "node build/main.js",
+    "build": "babel -d ./build ./src -s",
     "lint": "eslint . --fix"
   },
   "keywords": [],
@@ -30,5 +32,8 @@
     "eslint-plugin-import": "^2.19.1",
     "nodemon": "^2.0.1"
   },
-  "peerDependencies": {}
+  "peerDependencies": {},
+  "engines": {
+    "node": "12.x"
+  }
 }

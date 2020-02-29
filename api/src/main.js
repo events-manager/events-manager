@@ -1,3 +1,4 @@
+import "regenerator-runtime/runtime"
 import { ApolloServer } from 'apollo-server'
 
 import resolvers from './resolvers'
