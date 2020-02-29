@@ -1,20 +1,15 @@
 <template>
-  <main id="page">
-    <page-title title="Content" />
-  </main>
+  <div>
+    <PageTitle title="Events" />
+  </div>
 </template>
 
 <script>
 export default {
-
   components: {
     PageTitle: () => import('~/components/layout/PageTitle')
-  }
-
-  data() {
-    return {}
   }
 }
 </script>
 
-<style></style>
+<style lang="scss" scoped></style>
