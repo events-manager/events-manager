@@ -6,11 +6,9 @@
 
 <script>
 export default {
-
   components: {
     PageTitle: () => import('~/components/layout/PageTitle')
-  }
-
+  },
   data() {
     return {}
   }

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageTitle title="Events" />
+    <page-title title="Events" />
   </div>
 </template>
 

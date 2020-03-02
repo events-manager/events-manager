@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageTitle title="Organizations" />
+    <page-title title="Organizations" />
   </div>
 </template>
 
