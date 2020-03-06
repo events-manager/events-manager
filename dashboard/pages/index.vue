@@ -1,11 +1,17 @@
 <template>
   <main id="page">
-    <h1>Content</h1>
+    <page-title title="Content" />
+    <section>
+      <p>Content goes here!</p>
+    </section>
   </main>
 </template>
 
 <script>
 export default {
+  components: {
+    PageTitle: () => import('~/components/layout/PageTitle')
+  },
   data() {
     return {}
   }
