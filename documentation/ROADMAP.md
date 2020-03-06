@@ -8,7 +8,7 @@ The following are our short term goals.
 
 ## API
 
-- To be defined
+-
 
 ## Dashboard
 
@@ -18,10 +18,4 @@ The following are our short term goals.
 
 The following are our long term goals.
 
-## API
-
-- To be defined
-
-## Dashboard
-
-- To be defined
+- Design system

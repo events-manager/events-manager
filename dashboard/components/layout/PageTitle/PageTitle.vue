@@ -20,4 +20,8 @@ export default {
 h1 {
   margin-bottom: 16px;
 }
+
+.v-divider {
+  margin-bottom: 32px;
+}
 </style>

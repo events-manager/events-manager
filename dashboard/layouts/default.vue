@@ -38,6 +38,6 @@ h1 {
 
 .content {
   margin-left: 110px;
-  padding: 24px;
+  padding: 50px;
 }
 </style>
