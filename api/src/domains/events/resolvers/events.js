@@ -1,4 +1,4 @@
-import { UserInputError } from 'apollo-server'
+import { UserInputError } from 'apollo-server-lambda'
 import eventsCollection from '../../../data/events'
 
 /**

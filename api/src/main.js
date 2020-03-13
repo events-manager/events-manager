@@ -1,5 +1,5 @@
 import "regenerator-runtime/runtime"
-import { ApolloServer } from 'apollo-server'
+import { ApolloServer } from 'apollo-server-lambda'
 
 import resolvers from './resolvers'
 import typeDefs from './schema.gql'
@@ -18,7 +18,8 @@ const server = new ApolloServer({
   }
 })
 
+exports.handler = server.createHandler();
 
-server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
-  console.log(`🚀 Server ready at ${url}`);
-});
+// server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
+//   console.log(`🚀 Server ready at ${url}`);
+// });
