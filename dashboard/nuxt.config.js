@@ -15,7 +15,9 @@ module.exports = {
   },
   loading: { color: '#fff' },
   css: ['@/assets/scss/reset.scss'],
-  plugins: [],
+  plugins: [
+    '~/plugins/globalComponents.js'
+  ],
   buildModules: ['@nuxtjs/vuetify'],
   modules: [],
   build: {
