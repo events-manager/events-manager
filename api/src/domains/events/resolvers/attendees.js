@@ -1,4 +1,4 @@
-import { UserInputError } from 'apollo-server-lambda'
+import { UserInputError } from '../../../helpers/errorHandlers'
 
 /**
  * An attendee is a person with a ticket that visits an event

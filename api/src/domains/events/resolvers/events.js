@@ -1,4 +1,4 @@
-import { UserInputError } from 'apollo-server-lambda'
+import { UserInputError } from '../../../helpers/errorHandlers'
 import eventsCollection from '../../../data/events'
 
 /**
@@ -22,7 +22,7 @@ export const events = async (_, { brandSlug }, context) => {
     return eventsCollection.filter(event => event.brandSlug === brandSlug);
   }
 
-  return eventsCollection;
+  return [eventsCollection[0]];
 }
 
 export const event = async (_, { id, brandSlug }, context) => {

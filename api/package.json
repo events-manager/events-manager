@@ -5,17 +5,18 @@
   "main": "build/main.js",
   "repository": "https://github.com/chris-visser/events-dashboard",
   "scripts": {
-    "dev:old": "nodemon --ext js,graphql --exec babel-node src/main.js",
-    "dev": "netlify-lambda serve src",
+    "dev": "nodemon --ext js,graphql --exec babel-node src/server.js",
+    "dev:lambda": "netlify-lambda serve src",
     "start": "node build/main.js",
-    "build:old": "babel -d ./build ./src -s",
-    "build": "netlify-lambda build src",
+    "build": "babel -d ./build ./src -s",
+    "build:lambda": "netlify-lambda build src",
     "lint": "eslint . --fix"
   },
   "keywords": [],
   "author": "Chris <info@cloudspider.io>",
   "license": "ISC",
   "dependencies": {
+    "apollo-server": "^2.11.0",
     "apollo-server-lambda": "^2.11.0",
     "core-js": "3",
     "encoding": "^0.1.12",

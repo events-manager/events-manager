@@ -1,4 +1,4 @@
-import { UserInputError } from 'apollo-server-lambda'
+import { UserInputError } from '../../../helpers/errorHandlers'
 
 /**
  * A participant is a person that has a specific role at an event.
