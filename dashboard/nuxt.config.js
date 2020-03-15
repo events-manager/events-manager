@@ -1,6 +1,5 @@
 module.exports = {
   mode: 'spa',
-  buildDir: '../public',
   head: {
     title: process.env.npm_package_name || '',
     meta: [
