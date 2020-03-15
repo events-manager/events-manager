@@ -14,8 +14,8 @@
     "install:dashboard": "cd ./dashboard && npm i",
     "build:api": "cd api && npm run build",
     "build:dashboard": "cd dashboard && npm run build",
-    "deploy": "sh ./deploy.sh",
-    "nukeit": "rm -rf node_modules npm.lock && rm -rf ./dashboard/node_modules ./dashboard/npm.lock && rm -rf ./api/node_modules ./api/npm.lock"
+    "deploy": "sh ./scripts/deploy.sh",
+    "reset": "sh ./scripts/reset.sh"
   },
   "author": "Chris <info@cloudspider.io>",
   "license": "ISC",
