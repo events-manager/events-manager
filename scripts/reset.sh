@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "Resetting Root folder"
-rm -rf ./node_modules ./dist ./package-lock.json
+rm -rf ./node_modules ./dist ./package-lock.json ./lsp
 
 echo "Resetting Dashboard"
 rm -rf ./dashboard/node_modules ./dashboard/dist ./dashboard/package-lock.json
