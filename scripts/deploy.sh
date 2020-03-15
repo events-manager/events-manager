@@ -3,6 +3,6 @@
 mkdir dist
 mkdir dist/public
 
-mv api/built-lambda ./dist
-mv dashboard/dist/* ./dist/public
+mv api/* ./dist
+mv -R dashboard/dist/* ./dist/public
 

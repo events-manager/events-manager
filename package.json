@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "npm-run-all -p dev:api dev:dashboard",
     "install": "npm-run-all -p install:api install:dashboard",
-    "build": "npm i && npm-run-all -p build:api build:dashboard && npm run deploy",
+    "build": "npm run build:api && npm run build:dashboard && npm run deploy",
     "dev:api": "cd ./api && npm run dev",
     "dev:dashboard": "cd ./dashboard && npm run dev",
     "install:api": "cd ./api && npm i",
