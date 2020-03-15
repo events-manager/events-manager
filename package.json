@@ -6,11 +6,14 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm-run-all -p dev:api dev:dashboard",
-    "dev:dashboard": "cd ./dashboard && npm run dev",
+    "install": "npm-run-all -p install:api install:dashboard",
+    "build": "npm-run-all -p build:api build:dashboard",
     "dev:api": "cd ./api && npm run dev",
-    "install": "cd ./api && yarn && cd ../dashboard && yarn",
-    "build": "cd api && yarn build",
-    "start": "cd api && yarn start",
+    "dev:dashboard": "cd ./dashboard && npm run dev",
+    "install:api": "cd ./api && yarn",
+    "install:dashboard": "cd ./dashboard && yarn",
+    "build:api": "cd api && yarn build",
+    "build:dashboard": "cd dashboard && yarn build",
     "nukeit": "rm -rf node_modules yarn.lock && rm -rf ./dashboard/node_modules ./dashboard/yarn.lock && rm -rf ./api/node_modules ./api/yarn.lock"
   },
   "author": "Chris <info@cloudspider.io>",
