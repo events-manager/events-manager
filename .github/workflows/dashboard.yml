@@ -30,7 +30,7 @@ jobs:
         CI: true
         NODE_ENV: production
     - name: 'Deploy Dashboard to Netlify'
-      uses: jsmrcaga/action-netlify-deploy@v1
+      uses: jsmrcaga/action-netlify-deploy@v1.0.1
       with:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: 52bb5bb8-9b54-4377-b75d-ce4120cfcbaf
