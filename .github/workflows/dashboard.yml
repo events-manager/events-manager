@@ -32,7 +32,8 @@ jobs:
     - name: Netlify Deploy
       uses: nwtgck/actions-netlify@v1.0
       with:
-        publish-dir: './dashboard/dist'
+        publish-dir: "./dashboard/dist"
+        deploy-message: "Deploy from GitHub Actions"
       env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: 52bb5bb8-9b54-4377-b75d-ce4120cfcbaf
