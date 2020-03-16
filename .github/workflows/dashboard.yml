@@ -30,8 +30,9 @@ jobs:
         CI: true
         NODE_ENV: production
     - name: Netlify Deploy
-      uses: jsmrcaga/action-netlify-deploy@v1.0.1
+      uses: nwtgck/actions-netlify@v1.0
       with:
-        netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        netlify-site-id: 52bb5bb8-9b54-4377-b75d-ce4120cfcbaf
-        build-dir: './dashboard/dist'
+        publish-dir: './dashboard/dist'
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: 52bb5bb8-9b54-4377-b75d-ce4120cfcbaf
