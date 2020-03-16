@@ -35,4 +35,9 @@ That's why in this repo the root package.json forms the connection between the 2
 The `netlify.toml` file has been configured to point Netlify Functions to the `./dist/built-lambdas` folder where the built API is and the Netlify public entry point to the built Nuxt SPA located in `./dist/public` folder.
 
 
+## Notes
 
+Ideal deployment
+
+1. Test, Lint and Build API
+2. Testm, Lint and build

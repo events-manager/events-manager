@@ -2,7 +2,7 @@
   <main id="page">
     <page-title title="Content" />
     <section>
-      <p>Content goes here! Foo</p>
+      <p>Content goes here! Bar</p>
     </section>
   </main>
 </template>
