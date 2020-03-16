@@ -29,11 +29,11 @@ jobs:
       env:
         CI: true
         NODE_ENV: production
-    - name: Netlify Deploy
-      uses: nwtgck/actions-netlify@v1.0
+    - name: 'Deploy Dashboard to Netlify'
+      uses: jsmrcaga/action-netlify-deploy@v1
       with:
-        publish-dir: "./dashboard/dist"
-        deploy-message: "Deploy from GitHub Actions"
-      env:
         NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         NETLIFY_SITE_ID: 52bb5bb8-9b54-4377-b75d-ce4120cfcbaf
+        NETLIFY_DEPLOY_TO_PROD: true
+        build_directory: "./dashboard/dist"
+        NETLIFY_DEPLOY_MESSAGE: "Deploy v${{ github.ref }}"
