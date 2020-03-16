@@ -33,5 +33,5 @@ jobs:
       uses: jsmrcaga/action-netlify-deploy@v1.0.1
       with:
         netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        netlify-site-id: cb100898-e6d6-4046-842c-91a6cd8e1e55
+        netlify-site-id: 52bb5bb8-9b54-4377-b75d-ce4120cfcbaf
         build-dir: './dashboard/dist'
