@@ -2,9 +2,3 @@
   command = "yarn build" # the command you run to build this file
   functions = "built-lambda" # netlify-lambda builds to this folder AND Netlify reads functions from here
   publish = "/public"
-
-[[redirects]]
-  from = "/"
-  to = "/.netlify/functions/main"
-  status = 200
-  force = false
