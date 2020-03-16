@@ -1,6 +1,6 @@
 export default [{
   id: 'aokokfokpkfsokf',
-  slug: 'frontend-love-20200',
+  slug: 'frontend-love-2020',
   name: 'Frontend Love',
   brandSlug: 'frontend-love',
   venueId: 'aamnfdke4rilasss',
