@@ -18,7 +18,7 @@
 <script>
 export default {
   components: {
-    PageTitle: () => import('~/components/layout/PageTitle'),
+    PageTitle: () => import('~/components/page/PageTitle'),
     EventCard: () => import('~/components/events/EventCard')
   },
   data() {

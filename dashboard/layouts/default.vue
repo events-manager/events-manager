@@ -14,9 +14,9 @@
 <script>
 export default {
   components: {
-    MainHeader: () => import('~/components/base/Header'),
-    MainSidebar: () => import('~/components/base/Sidebar'),
-    MainFooter: () => import('~/components/base/Footer')
+    MainHeader: () => import('~/components/layout/MainHeader'),
+    MainSidebar: () => import('~/components/layout/MainSidebar'),
+    MainFooter: () => import('~/components/layout/MainFooter')
   }
 }
 </script>

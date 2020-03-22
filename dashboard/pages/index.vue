@@ -1,17 +1,14 @@
 <template>
-  <main id="page">
-    <page-title title="Content" />
-    <section>
-      <p>Content goes here! Bar</p>
-    </section>
-  </main>
+  <page-layout id="index-page" title="Content">
+
+    <p>Content goes here!</p>
+
+  </page-layout>
 </template>
 
 <script>
 export default {
-  components: {
-    PageTitle: () => import('~/components/layout/PageTitle')
-  },
+  components: {},
   data() {
     return {}
   }
