@@ -2,10 +2,10 @@
   "name": "api",
   "version": "1.0.0",
   "description": "Graphql API to manage events",
-  "main": "src/server.js",
+  "main": "src/lambda-server.js",
   "repository": "https://github.com/chris-visser/events-dashboard",
   "scripts": {
-    "dev": "netlify-lambda serve src/functions",
+    "dev": "nodemon --exec babel-node src/server.js",
     "build": "netlify-lambda build src/functions",
     "lint": "eslint . --fix"
   },
@@ -23,6 +23,7 @@
     "lodash": "^4.17.15",
     "mongoose": "^5.9.7",
     "netlify-lambda": "^1.6.3",
+    "regenerator-runtime": "^0.13.5",
     "utf-8-validate": "^5.0.2"
   },
   "devDependencies": {

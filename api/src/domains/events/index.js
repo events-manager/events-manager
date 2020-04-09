@@ -1,10 +1,10 @@
-import { event, events } from './resolvers/events';
-import { brand, brands } from './resolvers/brands';
-import { sponsors, organisation } from './resolvers/sponsors';
-import { speakers, person } from './resolvers/speakers';
-import { venue } from './resolvers/venue';
+import { event, events } from './events'
+import { brand, brands } from './brands'
+import { sponsors, organisation } from './sponsors'
+import { speakers, person } from './speakers'
+import { venue } from './venue'
 
-export const resolvers = {
+export default {
   Query: {
     brand,
     brands,

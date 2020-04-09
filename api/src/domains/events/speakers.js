@@ -1,5 +1,5 @@
-import speakersCollection from '../../../data/speakers'
-import peopleCollection from '../../../data/people'
+import speakersCollection from '../../data/speakers'
+import peopleCollection from '../../data/people'
 
 /**
  * One person could be speaker for 0 or multiple events. Each event could have zero or multiple speakers.

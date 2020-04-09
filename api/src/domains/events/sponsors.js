@@ -1,5 +1,5 @@
-import sponsorsCollection from '../../../data/sponsors'
-import organisationsCollection from '../../../data/organisations'
+import sponsorsCollection from '../../data/sponsors'
+import organisationsCollection from '../../data/organisations'
 
 /**
  * A sponsor is the unique combination between an event and an organisation 'sponsoring' the event

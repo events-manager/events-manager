@@ -1,3 +1,3 @@
-import server from '../server';
+import server from '../server'
 
-exports.handler = server.createHandler();
+exports.handler = server.createHandler()
