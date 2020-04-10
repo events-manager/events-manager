@@ -2,11 +2,32 @@
   <header>
     <span>Vue.js Amsterdam</span>
     <font-awesome-icon icon="th-large" />
+    <ul>
+      <li v-for="brand in brands" :key="brand.id">
+        {{ brand.name }}
+      </li>
+    </ul>
   </header>
 </template>
 
 <script>
-export default {}
+import gql from 'graphql-tag'
+
+export default {
+  data() {
+    return {
+      brands: []
+    }
+  },
+
+  apollo: {
+    brands: gql`query {
+      brands {
+        name
+      }
+    }`
+  }
+}
 </script>
 
 <style scoped>

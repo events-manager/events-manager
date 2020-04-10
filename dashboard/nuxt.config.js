@@ -19,8 +19,17 @@ module.exports = {
     '~/plugins/globalComponents.js'
   ],
   buildModules: ['@nuxtjs/vuetify'],
-  modules: [],
+  modules: ['@nuxtjs/apollo'],
+
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: process.env.API_URL || 'http://localhost:4000',
+      },
+    },
+  },
   build: {
-    extend(config, ctx) {}
+    extend(config, ctx) {
+    }
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <main-header />
+    <main-navbar />
     <main-sidebar />
     <section class="content">
       <nuxt />
@@ -12,10 +12,10 @@
 <script>
 export default {
   components: {
-    MainHeader: () => import('~/components/layout/MainHeader'),
+    MainNavbar: () => import('~/components/layout/MainNavbar'),
     MainSidebar: () => import('~/components/layout/MainSidebar'),
-    MainFooter: () => import('~/components/layout/MainFooter')
-  }
+    MainFooter: () => import('~/components/layout/MainFooter'),
+  },
 }
 </script>
 
