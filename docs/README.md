@@ -41,3 +41,12 @@ Ideal deployment
 
 1. Test, Lint and Build API
 2. Testm, Lint and build
+
+
+## Environments
+
+- Google Account
+- GitHub
+- Mongo Cloud
+- Netlify
+- Netlify functions

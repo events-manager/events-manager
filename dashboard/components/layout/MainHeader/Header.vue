@@ -1,6 +1,7 @@
 <template>
   <header>
-    <span>Events dashboard</span>
+    <span>Vue.js Amsterdam</span>
+    <font-awesome-icon icon="th-large" />
   </header>
 </template>
 
@@ -22,5 +23,11 @@ header {
 
 span {
   font-size: 32px;
+  width: 100%;
+  text-align: center;
+}
+
+.fa-th-large {
+  color: orange;
 }
 </style>

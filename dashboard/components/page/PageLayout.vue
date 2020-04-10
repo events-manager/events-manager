@@ -2,10 +2,8 @@
   <section class="page">
     <page-header>
       <page-title v-if="title">{{ title }}</page-title>
-
       <slot name="header" />
     </page-header>
-
     <page-content>
       <slot />
     </page-content>
@@ -24,5 +22,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

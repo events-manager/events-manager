@@ -2,11 +2,9 @@
   <div id="app">
     <main-header />
     <main-sidebar />
-
     <section class="content">
       <nuxt />
     </section>
-
     <main-footer />
   </div>
 </template>
@@ -22,8 +20,10 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 body {
-  font-family: 'Helvetica Neue', Arial, serif;
+  font-family: 'Nunito', 'Helvetica Neue', Arial, serif;
   font-size: 18px;
   background-color: #eeeeee;
 }

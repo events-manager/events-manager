@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUserSecret, faThLarge } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 const requireComponent = require.context(
   // The relative path of the components folder
@@ -11,7 +14,7 @@ const requireComponent = require.context(
   /Page[A-Z]\w+\.(vue|js)$/
 )
 
-requireComponent.keys().forEach(fileName => {
+requireComponent.keys().forEach((fileName) => {
   // Get component config
   const componentConfig = requireComponent(fileName)
 
@@ -26,6 +29,11 @@ requireComponent.keys().forEach(fileName => {
     )
   )
 
+  // Add icons to library
+  library.add(faUserSecret, faThLarge)
+
+  // Register font awesome icon component globally.
+  Vue.component('font-awesome-icon', FontAwesomeIcon)
 
   // Register component globally
   Vue.component(
