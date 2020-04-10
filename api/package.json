@@ -2,7 +2,7 @@
   "name": "api",
   "version": "1.0.0",
   "description": "Graphql API to manage events",
-  "main": "src/lambda-server.js",
+  "main": "src/functions/main.js",
   "repository": "https://github.com/chris-visser/events-dashboard",
   "scripts": {
     "dev": "nodemon --exec babel-node src/server.js",
