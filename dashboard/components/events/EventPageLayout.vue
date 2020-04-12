@@ -2,17 +2,17 @@
   <base-page-layout>
     <!-- Replace below line with a "BrandSwitcher" -->
     <portal to="sub-sidebar-header">
-      <h3>Frontend Love</h3>
+      <brand-switcher />
     </portal>
 
     <portal to="sub-sidebar">
       <sub-sidebar-nav>
-        <sub-sidebar-nav-item to="/">Overview</sub-sidebar-nav-item>
-        <sub-sidebar-nav-item to="/speakers">Speakers</sub-sidebar-nav-item>
-        <sub-sidebar-nav-item to="/venue">Venue</sub-sidebar-nav-item>
-        <sub-sidebar-nav-item to="/schedule">Schedule</sub-sidebar-nav-item>
-        <sub-sidebar-nav-item to="/sales">Sales</sub-sidebar-nav-item>
-        <sub-sidebar-nav-item to="/sponsors">Sponsors</sub-sidebar-nav-item>
+        <sub-sidebar-nav-item to="/events">Overview</sub-sidebar-nav-item>
+        <sub-sidebar-nav-item to="/events/speakers">Speakers</sub-sidebar-nav-item>
+        <sub-sidebar-nav-item to="/events/venue">Venue</sub-sidebar-nav-item>
+        <sub-sidebar-nav-item to="/events/schedule">Schedule</sub-sidebar-nav-item>
+        <sub-sidebar-nav-item to="/events/sales">Sales</sub-sidebar-nav-item>
+        <sub-sidebar-nav-item to="/events/sponsors">Sponsors</sub-sidebar-nav-item>
       </sub-sidebar-nav>
     </portal>
 
@@ -21,7 +21,13 @@
 </template>
 
 <script>
-export default {}
+import BrandSwitcher from './BrandSwitcher'
+
+export default {
+  components: {
+    BrandSwitcher
+  }
+}
 </script>
 
 <style scoped>

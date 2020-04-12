@@ -1,17 +1,19 @@
 <template>
-  <div class="wrapper">
-    <main-sidebar>
-      <span slot="header">LOGO</span>
-    </main-sidebar>
+  <v-app>
+    <div class="wrapper">
+      <main-sidebar>
+        <span slot="header">LOGO</span>
+      </main-sidebar>
 
-    <sub-sidebar>
-      <portal-target slot="header" name="sub-sidebar-header" />
+      <sub-sidebar>
+        <portal-target slot="header" name="sub-sidebar-header" />
 
-      <portal-target name="sub-sidebar" />
-    </sub-sidebar>
+        <portal-target name="sub-sidebar" />
+      </sub-sidebar>
 
-    <nuxt />
-  </div>
+      <nuxt />
+    </div>
+  </v-app>
 </template>
 
 <script>

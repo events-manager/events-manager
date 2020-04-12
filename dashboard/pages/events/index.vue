@@ -1,17 +1,15 @@
 <template>
-  <div>
-    TEST
-  </div>
+  <event-page-layout>
+    <p>Content goes here!</p>
+  </event-page-layout>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      dense: false,
-    }
-  },
+  components: {
+    EventPageLayout: () => import('~/components/events/EventPageLayout')
+  }
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style></style>

@@ -49,7 +49,22 @@ a {
     color: #ed7117;
   }
 
-  &.nuxt-link-exact-active {
+  &.nuxt-link-exact-active:first-child {
+    &::after {
+      content: ' ';
+      background: #ed7117;
+      border-radius: 10px;
+      position: absolute;
+      width: 6px;
+      height: 90px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: 0;
+    }
+  }
+
+  &.nuxt-link-active:not(:first-child) {
     &::after {
       content: ' ';
       background: #ed7117;

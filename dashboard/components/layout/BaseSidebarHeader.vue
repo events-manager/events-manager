@@ -14,6 +14,7 @@ header {
   align-items: center;
   justify-content: center;
   height: 90px;
+  padding: 20px;
   border-bottom: 1px solid #eeeeee;
 }
 </style>
