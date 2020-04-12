@@ -7,11 +7,11 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 const requireComponent = require.context(
   // The relative path of the components folder
-  '~/components/page',
+  '~/components/layout',
   // Whether or not to look in subfolders
-  false,
+  false
   // The regular expression used to match base component filenames
-  /Page[A-Z]\w+\.(vue|js)$/
+  // /Page[A-Z]\w+\.(vue|js)$/
 )
 
 requireComponent.keys().forEach((fileName) => {

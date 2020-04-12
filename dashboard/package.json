@@ -19,7 +19,8 @@
     "@nuxtjs/vuetify": "^1.11.0",
     "graphql-tag": "^2.10.3",
     "lodash": "^4.17.15",
-    "nuxt": "^2.12.2"
+    "nuxt": "^2.12.2",
+    "portal-vue": "^2.1.7"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.2",

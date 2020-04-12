@@ -1,22 +1,21 @@
 <template>
-  <div id="app">
-    <main-navbar />
-    <main-sidebar />
-    <section class="content">
-      <nuxt />
-    </section>
-    <main-footer />
+  <div class="wrapper">
+    <main-sidebar>
+      <span slot="header">LOGO</span>
+    </main-sidebar>
+
+    <sub-sidebar>
+      <portal-target slot="header" name="sub-sidebar-header" />
+
+      <portal-target name="sub-sidebar" />
+    </sub-sidebar>
+
+    <nuxt />
   </div>
 </template>
 
 <script>
-export default {
-  components: {
-    MainNavbar: () => import('~/components/layout/MainNavbar'),
-    MainSidebar: () => import('~/components/layout/MainSidebar'),
-    MainFooter: () => import('~/components/layout/MainFooter'),
-  },
-}
+export default {}
 </script>
 
 <style lang="scss">
@@ -24,20 +23,33 @@ export default {
 
 body {
   font-family: 'Nunito', 'Helvetica Neue', Arial, serif;
-  font-size: 18px;
+  font-size: 16px;
   background-color: #eeeeee;
 }
 
 a {
   text-decoration: none;
+  color: #3a3a3a;
+
+  &:hover {
+    color: #ed7117;
+  }
+
+  &:active {
+    color: #cb5905;
+  }
+
+  &.nuxt-link-exact-active {
+    color: #ed7117;
+  }
 }
 
 h1 {
   font-weight: normal;
 }
 
-.content {
-  margin-left: 110px;
-  padding: 50px;
+.wrapper {
+  display: flex;
+  position: relative;
 }
 </style>

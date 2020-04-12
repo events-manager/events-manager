@@ -1,14 +1,13 @@
 <template>
-  <page-layout id="index-page" title="Content">
+  <event-page-layout>
     <p>Content goes here!</p>
-  </page-layout>
+  </event-page-layout>
 </template>
 
 <script>
 export default {
-  components: {},
-  data() {
-    return {}
+  components: {
+    EventPageLayout: () => import('~/components/events/EventPageLayout')
   }
 }
 </script>

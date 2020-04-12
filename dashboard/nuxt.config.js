@@ -15,21 +15,18 @@ module.exports = {
   },
   loading: { color: '#fff' },
   css: ['@/assets/scss/reset.scss'],
-  plugins: [
-    '~/plugins/globalComponents.js'
-  ],
+  plugins: ['~/plugins/globalComponents.js'],
   buildModules: ['@nuxtjs/vuetify'],
-  modules: ['@nuxtjs/apollo'],
+  modules: ['@nuxtjs/apollo', 'portal-vue/nuxt'],
 
   apollo: {
     clientConfigs: {
       default: {
         httpEndpoint: process.env.API_URL || 'http://localhost:4000',
-      },
-    },
+      }
+    }
   },
   build: {
-    extend(config, ctx) {
-    }
+    extend(config, ctx) {}
   }
 }
