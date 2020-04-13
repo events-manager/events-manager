@@ -31,8 +31,4 @@ a {
     color: #ed7117;
   }
 }
-
-h1 {
-  font-weight: normal;
-}
 </style>

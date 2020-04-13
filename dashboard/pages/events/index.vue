@@ -1,6 +1,8 @@
 <template>
-  <event-page-layout>
-    <p>Overview of all events</p>
+  <event-page-layout title="Events">
+    <div class="card">
+      TEST
+    </div>
   </event-page-layout>
 </template>
 
@@ -12,4 +14,9 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.card {
+  padding: 20px;
+  border-radius: 10px;
+}
+</style>

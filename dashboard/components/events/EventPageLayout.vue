@@ -8,11 +8,12 @@
     <portal to="sub-sidebar">
       <sub-sidebar-nav>
         <sub-sidebar-nav-item
-          v-for="item in navItems"
-          :key="item.to"
-          :to="item.to"
+          v-for="{ to, icon, title } in navItems"
+          :key="to"
+          :to="to"
         >
-          {{ item.title }}
+          <span class="icon" :class="icon" />
+          {{ title }}
         </sub-sidebar-nav-item>
       </sub-sidebar-nav>
     </portal>
@@ -30,14 +31,13 @@ export default {
   },
   data() {
     return {
-      domain: 'events',
       pages: [
-        { slug: '', title: 'Overview' },
-        { slug: 'speakers', title: 'Speakers' },
-        { slug: 'venue', title: 'Venue' },
-        { slug: 'schedule', title: 'Schedule' },
-        { slug: 'sales', title: 'Sales' },
-        { slug: 'sponsors', title: 'Sponsors' }
+        { slug: '', title: 'Overview', icon: 'lnr lnr-chart-bars' },
+        { slug: 'speakers', title: 'Speakers', icon: 'lnr lnr-bullhorn' },
+        { slug: 'venue', title: 'Venue', icon: 'lnr lnr-map-marker' },
+        { slug: 'schedule', title: 'Schedule', icon: 'lnr lnr-clock' },
+        { slug: 'sales', title: 'Sales', icon: 'lnr lnr-pie-chart' },
+        { slug: 'sponsors', title: 'Sponsors', icon: 'lnr lnr-briefcase' }
       ]
     }
   },
@@ -45,7 +45,7 @@ export default {
     navItems() {
       const brandSlug = this.$route.params.brandSlug
       const brandUri = brandSlug ? `/brands/${brandSlug}` : ''
-      const baseUri = `/${this.domain}${brandUri}/`
+      const baseUri = `/events${brandUri}/`
       return this.pages.map((page) => ({
         ...page,
         to: `${baseUri}${page.slug}`
@@ -56,13 +56,9 @@ export default {
 </script>
 
 <style scoped>
-ul {
-  padding-left: 20px;
-  list-style: disc;
-}
-
-a {
-  display: flex;
-  padding: 12px 0;
+.icon {
+  display: block;
+  margin-left: -20px;
+  margin-right: 10px;
 }
 </style>

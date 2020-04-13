@@ -6,12 +6,14 @@ import gql from "graphql-tag"
     </base-sidebar-header>
 
     <nav class="main-navigation">
-      <nuxt-link to="/">Dashboard</nuxt-link>
-      <nuxt-link to="/events">Events</nuxt-link>
-      <nuxt-link to="/people">People</nuxt-link>
-      <nuxt-link to="/finance">Finance</nuxt-link>
-      <nuxt-link to="/locations">Locations</nuxt-link>
-      <nuxt-link to="/organisations">Organisations</nuxt-link>
+      <ul>
+        <li v-for="{ to, label, icon } in navItems" :key="to">
+          <nuxt-link :to="to">
+            <span class="icon" :class="icon" />
+            {{ label }}
+          </nuxt-link>
+        </li>
+      </ul>
     </nav>
     <slot name="bottom" />
   </div>
@@ -23,6 +25,18 @@ import BaseSidebarHeader from './BaseSidebarHeader'
 export default {
   components: {
     BaseSidebarHeader
+  },
+  data() {
+    return {
+      navItems: [
+        { label: 'Dashboard', icon: 'lnr lnr-home', to: '/' },
+        { label: 'Events', icon: 'lnr lnr-calendar-full', to: '/events' },
+        { label: 'People', icon: 'lnr lnr-users', to: '/people' },
+        { label: 'Finance', icon: 'lnr lnr-briefcase', to: '/finance' },
+        { label: 'Locations', icon: 'lnr lnr-map-marker', to: '/locations' },
+        { label: 'Organisations', icon: 'lnr lnr-apartment', to: '/organisations' }
+      ]
+    }
   }
 }
 </script>
@@ -36,9 +50,16 @@ export default {
   position: relative;
 }
 
+.main-navigation {
+  ul {
+    padding-left: 0;
+  }
+}
+
 a {
   position: relative;
   display: flex;
+  flex-direction: column;
   height: 110px;
   width: 120px;
   align-items: center;
@@ -47,6 +68,14 @@ a {
 
   &:hover {
     color: #ed7117;
+  }
+
+  .icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    margin-bottom: 10px;
   }
 
   &.nuxt-link-exact-active:first-child {
