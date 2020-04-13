@@ -1,5 +1,20 @@
 <template>
-  <v-select :items="items" label="Select Brand" clearable @change="handleChange"></v-select>
+  <b-autocomplete
+    v-model="selected"
+    :data="brands"
+    placeholder="Select brand"
+    icon="magnify"
+    field="slug"
+    open-on-focus
+    rounded
+    clearable
+  >
+    <template slot-scope="props">
+      <div class="option">
+        {{ props.option.name }}
+      </div>
+    </template>
+  </b-autocomplete>
 </template>
 
 <script>
@@ -8,31 +23,44 @@ import gql from 'graphql-tag'
 export default {
   data() {
     return {
-      brands: [],
+      selected: this.$route.params.brandSlug,
+      brands: []
     }
   },
   apollo: {
     brands: gql`
       query {
         brands {
-          id
+          slug
           name
         }
       }
     `
   },
-  computed: {
-    items() {
-      return this.brands.map((brand) => ({ value: brand.id, text: brand.name }))
-    }
-  },
-  methods: {
-    handleChange(value) {
-      if (value) {
-        this.$router.replace(`${this.$route.fullPath}?brandId=${value}`)
-      } else {
-        this.$router.replace(this.$route.fullPath)
+  watch: {
+    selected() {
+      // TODO this is crap. We might need a tiny layer over the current Vue Router to enable
+      // easy route manipulations from within smart components
+      const currentUriSegments = this.$route.fullPath.split('/')
+
+      if (!this.selected) {
+        const segmentsWithoutBrandUri = [
+          currentUriSegments[1],
+          ...currentUriSegments.slice(4)
+        ]
+
+        return this.$router.push(`/${segmentsWithoutBrandUri.join('/')}`)
       }
+
+      const segmentsWithBrandUri = [
+        currentUriSegments[1],
+        'brands',
+        this.selected,
+        ...currentUriSegments.slice(2)
+      ]
+
+      const uri = segmentsWithBrandUri.join('/')
+      this.$router.push(`/${uri}`)
     }
   }
 }

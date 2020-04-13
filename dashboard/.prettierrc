@@ -4,5 +4,6 @@
   "singleQuote": true,
   "trailingComma": "none",
   "endOfLine": "lf",
-  "htmlWhitespaceSensitivity": "ignore"
+  "htmlWhitespaceSensitivity": "ignore",
+  "arrow-parens": "as-needed"
 }

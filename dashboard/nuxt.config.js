@@ -13,10 +13,16 @@ module.exports = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  loading: { color: '#fff' },
-  plugins: ['~/plugins/globalComponents.js'],
-  buildModules: ['@nuxtjs/vuetify'],
-  modules: ['@nuxtjs/apollo', 'portal-vue/nuxt'],
+  css: ['@/assets/scss/reset.scss'],
+  plugins: [
+    '~/plugins/layoutComponents.js' // Automatically registers components from the layout folder
+  ],
+  buildModules: [],
+  modules: [
+    '@nuxtjs/apollo',
+    'portal-vue/nuxt',
+    'nuxt-buefy'
+  ],
 
   apollo: {
     clientConfigs: {
@@ -24,9 +30,6 @@ module.exports = {
         httpEndpoint: process.env.API_URL || 'http://localhost:4000',
       }
     }
-  },
-  vuetify: {
-    customVariables: ['./assets/variables.scss']
   },
   build: {
     extend(config, ctx) {}

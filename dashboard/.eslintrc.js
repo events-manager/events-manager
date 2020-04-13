@@ -14,6 +14,5 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:nuxt/recommended'
   ],
-  plugins: ['prettier'],
-  rules: {}
+  plugins: ['prettier']
 }

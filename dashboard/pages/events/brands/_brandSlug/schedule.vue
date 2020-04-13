@@ -1,6 +1,6 @@
 <template>
   <event-page-layout>
-    <p>Overview of all events</p>
+    <p>Schedule for brand {{ $route.params.brandSlug }}</p>
   </event-page-layout>
 </template>
 

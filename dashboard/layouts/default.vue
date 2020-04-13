@@ -1,19 +1,5 @@
 <template>
-  <v-app>
-    <div class="wrapper">
-      <main-sidebar>
-        <span slot="header">LOGO</span>
-      </main-sidebar>
-
-      <sub-sidebar>
-        <portal-target slot="header" name="sub-sidebar-header" />
-
-        <portal-target name="sub-sidebar" />
-      </sub-sidebar>
-
-      <nuxt />
-    </div>
-  </v-app>
+  <nuxt />
 </template>
 
 <script>
@@ -48,10 +34,5 @@ a {
 
 h1 {
   font-weight: normal;
-}
-
-.wrapper {
-  display: flex;
-  position: relative;
 }
 </style>

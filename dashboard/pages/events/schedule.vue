@@ -1,6 +1,6 @@
 <template>
   <event-page-layout>
-    <p>Overview of all events</p>
+    <p>Overview of all schedules</p>
   </event-page-layout>
 </template>
 

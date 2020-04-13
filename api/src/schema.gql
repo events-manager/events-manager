@@ -47,6 +47,7 @@ type Person{
 type Brand{
     id: ID
     name: String
+    slug: String
     logo: String
     events: [Event]
     labels: [Label]

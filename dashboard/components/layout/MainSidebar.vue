@@ -1,3 +1,4 @@
+import gql from "graphql-tag"
 <template>
   <div class="sidebar">
     <base-sidebar-header>
@@ -8,11 +9,10 @@
       <nuxt-link to="/">Dashboard</nuxt-link>
       <nuxt-link to="/events">Events</nuxt-link>
       <nuxt-link to="/people">People</nuxt-link>
-      <nuxt-link to="/locations">Finance</nuxt-link>
+      <nuxt-link to="/finance">Finance</nuxt-link>
       <nuxt-link to="/locations">Locations</nuxt-link>
-      <nuxt-link to="/organizations">Organizations</nuxt-link>
+      <nuxt-link to="/organisations">Organisations</nuxt-link>
     </nav>
-
     <slot name="bottom" />
   </div>
 </template>
