@@ -29,9 +29,10 @@ The main sidebar allows navigation across different contexts.
 ## Context Layout
 
 Each context can have its own layout, but lives within the route level. This might sound confusing, because we also have 
-the page level. Each page component in the `./pages` folder has its own `context-layout` wrapped around it and lives within 
-a folder that represents the name of that context. For example the speakers page for events lives in `./pages/events/speakers.vue`.
-The speakers page will have `<events-context-layout>` as the root node - just like any other page in the `./events` folder.
+the page level. Each page `./pages` folder has its own `context-layout` wrapped around it. The type of context-layout is 
+ dictated by the context this page lives in. Context folders are all folders in the root of `./pages`. 
+ For example the speakers page for events lives in `./pages/events/speakers.vue`. `events` is the context. `speakers.vue` the page.
+This speakers page will have `<events-context-layout>` as the root node - just like any other page in the `./events` folder.
 
 Context layouts don't change between pages within 1 context.
 
