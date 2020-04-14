@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "nodemon --exec babel-node src/server.js",
     "build": "netlify-lambda build src/functions",
+    "dev:lambda": "netlify-lambda serve src/functions",
     "lint": "eslint . --fix"
   },
   "keywords": [],
