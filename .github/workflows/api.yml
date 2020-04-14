@@ -29,13 +29,13 @@ jobs:
       env:
         CI: true
         NODE_ENV: production
-    - name: 'Deploy API to Netlify'
-      uses: jsmrcaga/action-netlify-deploy@v1.0.1
-      with:
-        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        NETLIFY_SITE_ID: cb100898-e6d6-4046-842c-91a6cd8e1e55
-        NETLIFY_DEPLOY_TO_PROD: true
-        build_directory: "./api"
-        functions_directory: "/api/built-functions"
-        NETLIFY_DEPLOY_MESSAGE: "Deploy v${{ github.ref }}"
+#    - name: 'Deploy API to Netlify'
+#      uses: jsmrcaga/action-netlify-deploy@v1.0.1
+#      with:
+#        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+#        NETLIFY_SITE_ID: cb100898-e6d6-4046-842c-91a6cd8e1e55
+#        NETLIFY_DEPLOY_TO_PROD: true
+#        build_directory: "./api"
+#        functions_directory: "/api/built-functions"
+#        NETLIFY_DEPLOY_MESSAGE: "Deploy v${{ github.ref }}"
 
