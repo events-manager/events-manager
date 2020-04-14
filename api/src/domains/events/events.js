@@ -19,10 +19,10 @@ import eventsCollection from '../../data/events'
 export const events = async (_, { brandSlug }, context) => {
 
   if (brandSlug) {
-    return eventsCollection.filter(event => event.brandSlug === brandSlug);
+    return eventsCollection.filter((event) => event.brandSlug === brandSlug)
   }
 
-  return [eventsCollection[0]];
+  return eventsCollection
 }
 
 export const event = async (_, { id, brandSlug }, context) => {
@@ -31,11 +31,11 @@ export const event = async (_, { id, brandSlug }, context) => {
   }
 
   if (brandSlug) {
-    return eventsCollection.find(event => event.brandSlug === brandSlug);
+    return eventsCollection.find((event) => event.brandSlug === brandSlug)
     // Return the current event
   }
 
-  return eventsCollection.find(event => event.id === id);
+  return eventsCollection.find((event) => event.id === id)
 }
 
 

@@ -13,13 +13,13 @@
 </template>
 
 <style scoped>
-.domain {
+.context {
   flex: 1;
   display: flex;
   height: 100vh;
 }
 .page {
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   flex: 1;
   height: 100vh;
 }
