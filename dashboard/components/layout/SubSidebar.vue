@@ -11,12 +11,8 @@
 </template>
 
 <script>
-import SidebarHeader from './BaseSidebarHeader'
-
 export default {
-  components: {
-    SidebarHeader
-  }
+  components: {}
 }
 </script>
 

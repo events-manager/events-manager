@@ -1,13 +1,13 @@
 <template>
-  <event-page-layout>
+  <context-layout>
     <p>Overview for brand {{ $route.params.brandSlug }}</p>
-  </event-page-layout>
+  </context-layout>
 </template>
 
 <script>
 export default {
   components: {
-    EventPageLayout: () => import('~/components/events/EventPageLayout')
+    ContextLayout: () => import('~/components/events/ContextLayout')
   }
 }
 </script>

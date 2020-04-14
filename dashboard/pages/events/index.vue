@@ -1,15 +1,15 @@
 <template>
-  <event-page-layout title="Events">
+  <context-layout title="Events">
     <div class="card">
       TEST
     </div>
-  </event-page-layout>
+  </context-layout>
 </template>
 
 <script>
 export default {
   components: {
-    EventPageLayout: () => import('~/components/events/EventPageLayout')
+    ContextLayout: () => import('~/components/events/ContextLayout')
   }
 }
 </script>

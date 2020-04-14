@@ -1,25 +1,20 @@
 <template>
-  <base-page-layout>
-    <!-- Replace below line with a "BrandSwitcher" -->
-    <portal to="sub-sidebar-header">
-      <brand-switcher />
-    </portal>
+  <base-context-layout>
+    <brand-switcher slot="sidebar-header" />
 
-    <portal to="sub-sidebar">
-      <sub-sidebar-nav>
-        <sub-sidebar-nav-item
-          v-for="{ to, icon, title } in navItems"
-          :key="to"
-          :to="to"
-        >
-          <span class="icon" :class="icon" />
-          {{ title }}
-        </sub-sidebar-nav-item>
-      </sub-sidebar-nav>
-    </portal>
+    <sub-sidebar-nav slot="sidebar-body">
+      <sub-sidebar-nav-item
+        v-for="{ to, icon, title } in navItems"
+        :key="to"
+        :to="to"
+      >
+        <span class="icon" :class="icon" />
+        {{ title }}
+      </sub-sidebar-nav-item>
+    </sub-sidebar-nav>
 
     <slot />
-  </base-page-layout>
+  </base-context-layout>
 </template>
 
 <script>
@@ -43,6 +38,7 @@ export default {
   },
   computed: {
     navItems() {
+      // TODO Extract this functionality into a Vue Hook named useBrandNav(pages)
       const brandSlug = this.$route.params.brandSlug
       const brandUri = brandSlug ? `/brands/${brandSlug}` : ''
       const baseUri = `/events${brandUri}/`

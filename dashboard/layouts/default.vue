@@ -1,5 +1,11 @@
 <template>
-  <nuxt />
+  <div class="wrapper">
+    <main-sidebar>
+      <span slot="header">LOGO</span>
+    </main-sidebar>
+
+    <nuxt />
+  </div>
 </template>
 
 <script>
@@ -30,5 +36,10 @@ a {
   &.nuxt-link-exact-active {
     color: #ed7117;
   }
+}
+
+.wrapper {
+  display: flex;
+  position: relative;
 }
 </style>

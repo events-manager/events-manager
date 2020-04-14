@@ -40,7 +40,7 @@ The `netlify.toml` file has been configured to point Netlify Functions to the `.
 Ideal deployment
 
 1. Test, Lint and Build API
-2. Testm, Lint and build
+2. Test, Lint and build dashboard
 
 
 ## Environments

@@ -1,9 +1,9 @@
 import gql from "graphql-tag"
 <template>
   <div class="sidebar">
-    <base-sidebar-header>
+    <sidebar-header>
       <slot name="header" />
-    </base-sidebar-header>
+    </sidebar-header>
 
     <nav class="main-navigation">
       <ul>
@@ -20,12 +20,7 @@ import gql from "graphql-tag"
 </template>
 
 <script>
-import BaseSidebarHeader from './BaseSidebarHeader'
-
 export default {
-  components: {
-    BaseSidebarHeader
-  },
   data() {
     return {
       navItems: [
