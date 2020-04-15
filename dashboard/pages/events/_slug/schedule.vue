@@ -1,13 +1,13 @@
 <template>
-  <context-layout>
+  <event-layout>
     <p>Overview of all schedules</p>
-  </context-layout>
+  </event-layout>
 </template>
 
 <script>
 export default {
   components: {
-    ContextLayout: () => import('~/components/events/ContextLayout')
+    EventLayout: () => import('~/components/events/EventLayout')
   }
 }
 </script>

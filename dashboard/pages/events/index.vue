@@ -1,16 +1,16 @@
-import gql from "graphql-tag"
 <template>
   <context-layout title="Events">
-    <header>
-      <h1>Events</h1>
-    </header>
+    <page-layout>
+      <header>
+        <h1>Events</h1>
+      </header>
 
-
-      <div v-for="event in events" :key="event.id" class="card">
-        {{ event.name }} {{ event.id }}
-      </div>
-
-
+      <section class="columns">
+        <nuxt-link v-for="{ id, slug, name } in events" :key="id" class="card column" :to="`/events/${slug}`">
+          {{ name }}
+        </nuxt-link>
+      </section>
+    </page-layout>
   </context-layout>
 </template>
 
@@ -18,9 +18,6 @@ import gql from "graphql-tag"
 import gql from 'graphql-tag'
 
 export default {
-  components: {
-    ContextLayout: () => import('~/components/events/ContextLayout')
-  },
   data() {
     return {
       events: []
@@ -53,9 +50,14 @@ h1 {
   font-size: 2rem;
 }
 
+.columns {
+  margin: 0 -20px;
+}
+
 .card {
+  margin: 0 20px;
   padding: 20px;
   border-radius: 10px;
-  margin-bottom: 1rem;
+  /*margin-bottom: 1rem;*/
 }
 </style>

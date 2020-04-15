@@ -25,9 +25,13 @@ export const events = async (_, { brandSlug }, context) => {
   return eventsCollection
 }
 
-export const event = async (_, { id, brandSlug }, context) => {
-  if (!id && !brandSlug) {
+export const event = async (_, { id, slug, brandSlug }, context) => {
+  if (!id && !brandSlug && !slug) {
     throw new UserInputError('slugOrIdRequired')
+  }
+
+  if (slug) {
+    return eventsCollection.find((event) => event.slug === slug)
   }
 
   if (brandSlug) {

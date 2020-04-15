@@ -1,36 +1,41 @@
-import gql from "graphql-tag"
 <template>
   <div class="sidebar">
-    <sidebar-header>
+    <sidebar-header v-if="$slots.header">
       <slot name="header" />
     </sidebar-header>
 
-    <nav class="main-navigation">
+    <nav v-if="navItems.length > 0">
       <ul>
-        <li v-for="{ to, label, icon } in navItems" :key="to">
+        <li v-for="{ to, title, icon } in navItems" :key="to">
           <nuxt-link :to="to">
             <span class="icon" :class="icon" />
-            {{ label }}
+            {{ title }}
           </nuxt-link>
         </li>
       </ul>
     </nav>
-    <slot name="bottom" />
+    <slot />
   </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      navItems: [
-        { label: 'Dashboard', icon: 'lnr lnr-home', to: '/' },
-        { label: 'Events', icon: 'lnr lnr-calendar-full', to: '/events' },
-        { label: 'People', icon: 'lnr lnr-users', to: '/people' },
-        { label: 'Finance', icon: 'lnr lnr-briefcase', to: '/finance' },
-        { label: 'Locations', icon: 'lnr lnr-map-marker', to: '/locations' },
-        { label: 'Organisations', icon: 'lnr lnr-apartment', to: '/organisations' }
-      ]
+  props: {
+    pages: {
+      type: Array,
+      default: () => []
+    },
+    baseUri: {
+      type: String,
+      default: ''
+    }
+  },
+  computed: {
+    navItems() {
+      return this.pages.map((page) => ({
+        ...page,
+        to: `${this.baseUri}${page.to}`
+      }))
     }
   }
 }
@@ -45,10 +50,8 @@ export default {
   position: relative;
 }
 
-.main-navigation {
-  ul {
-    padding-left: 0;
-  }
+nav > ul {
+  padding-left: 0;
 }
 
 a {
