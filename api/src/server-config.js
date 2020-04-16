@@ -4,7 +4,10 @@ import typeDefs from './schema.gql'
 export default {
   resolvers,
   typeDefs,
-  cors: false,
+  cors: {
+    origin: '*',			// <- allow request from all domains
+    credentials: true
+  },
   // context: () => {
   //   // console.log(context)
   //   // Note! This example uses the `req` object to access headers,

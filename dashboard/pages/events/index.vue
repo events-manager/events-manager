@@ -1,8 +1,8 @@
 <template>
   <domain-layout title="Events">
-    <sub-sidebar>
+    <domain-sidebar>
 
-    </sub-sidebar>
+    </domain-sidebar>
     <page-layout>
       <header>
         <h1>Events</h1>
