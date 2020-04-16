@@ -4,7 +4,7 @@ heroImage: /hero.png
 heroText: Events Manager Docs
 tagline: The documentation of the most awesome events manager ever!
 actionText: Get Started →
-actionLink: /guide/
+actionLink: /guide/introduction
 features:
 - title: Vision
   details: The ultimate form of agility is the one that makes people focused on a single mission. Like that agile football player that blindly knows where the goal is. 
