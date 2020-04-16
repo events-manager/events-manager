@@ -47,7 +47,7 @@ a {
   }
 
   &:active {
-    color: #cb5905;
+    color: #cb5905;;
   }
 
   &.nuxt-link-exact-active {

@@ -6,7 +6,7 @@ import gql from "graphql-tag"
 
       <sub-sidebar-nav>
         <sub-sidebar-nav-item
-          v-for="{ to, title, icon } in pages"
+          v-for="{ to, title, icon } in navItems"
           :key="to"
           :to="to"
         >
@@ -30,12 +30,12 @@ export default {
     return {
       event: null,
       pages: [
-        { title: 'Overview', to: '/', icon: 'lnr lnr-chart-bars' },
-        { title: 'Speakers', to: '/speakers', icon: 'lnr lnr-bullhorn' },
-        { title: 'Venue', to: '/venue', icon: 'lnr lnr-map-marker' },
-        { title: 'Schedule', to: '/schedule', icon: 'lnr lnr-clock' },
-        { title: 'Sales', to: '/sales', icon: 'lnr lnr-pie-chart' },
-        { title: 'Sponsors', to: '/sponsors', icon: 'lnr lnr-briefcase' }
+        { title: 'Overview', slug: '', icon: 'lnr lnr-chart-bars' },
+        { title: 'Speakers', slug: 'speakers', icon: 'lnr lnr-bullhorn' },
+        { title: 'Venue', slug: 'venue', icon: 'lnr lnr-map-marker' },
+        { title: 'Schedule', slug: 'schedule', icon: 'lnr lnr-clock' },
+        { title: 'Sales', slug: 'sales', icon: 'lnr lnr-pie-chart' },
+        { title: 'Sponsors', slug: 'sponsors', icon: 'lnr lnr-briefcase' }
       ]
     }
   },
@@ -62,6 +62,14 @@ export default {
       const brandSlug = this.$route.params.brandSlug
       const brandUri = brandSlug ? `/brands/${brandSlug}` : ''
       return `/events${brandUri}/`
+    },
+    navItems() {
+      return this.pages.map((page) => {
+        return {
+          ...page,
+          to: `/events/${this.$route.params.slug}/${page.slug}`
+        }
+      })
     }
   }
 }

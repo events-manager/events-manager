@@ -6,7 +6,7 @@
       </header>
 
       <section class="columns">
-        <nuxt-link v-for="{ id, slug, name } in events" :key="id" class="card column" :to="`/events/${slug}`">
+        <nuxt-link v-for="{ id, slug, name } in events" :key="id" class="card column is-one-quarter" :to="`/events/${slug}`">
           {{ name }}
         </nuxt-link>
       </section>

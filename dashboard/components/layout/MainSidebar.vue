@@ -54,6 +54,42 @@ nav > ul {
   padding-left: 0;
 }
 
+.nuxt-link-exact-active {
+  color: #ed7117;
+
+  &::after {
+    content: ' ';
+    background: #ed7117;
+    border-radius: 10px;
+    position: absolute;
+    width: 6px;
+    height: 90px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+  }
+}
+
+li:not(:first-child) {
+  .nuxt-link-active {
+    color: #ed7117;
+
+    &::after {
+      content: ' ';
+      background: #ed7117;
+      border-radius: 10px;
+      position: absolute;
+      width: 6px;
+      height: 90px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      left: 0;
+    }
+  }
+}
+
 a {
   position: relative;
   display: flex;
@@ -74,36 +110,6 @@ a {
     height: 40px;
     font-size: 40px;
     margin-bottom: 10px;
-  }
-
-  &.nuxt-link-exact-active:first-child {
-    &::after {
-      content: ' ';
-      background: #ed7117;
-      border-radius: 10px;
-      position: absolute;
-      width: 6px;
-      height: 90px;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      transform: translateY(-50%);
-      left: 0;
-    }
-  }
-
-  &.nuxt-link-active:not(:first-child) {
-    &::after {
-      content: ' ';
-      background: #ed7117;
-      border-radius: 10px;
-      position: absolute;
-      width: 6px;
-      height: 90px;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      transform: translateY(-50%);
-      left: 0;
-    }
   }
 }
 </style>

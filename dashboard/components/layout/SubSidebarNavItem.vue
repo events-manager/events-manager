@@ -22,4 +22,7 @@ a {
   display: flex;
   padding: 12px 0 12px 30px;
 }
+.nuxt-link-exact-active {
+  color: #ed7117;
+}
 </style>
