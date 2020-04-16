@@ -1,4 +1,4 @@
-export { UserInputError } from 'apollo-server'
+import { UserInputError } from 'apollo-server'
 import brandsCollection from '../../data/brands';
 
 export const brands = async (_, {}, context) => {

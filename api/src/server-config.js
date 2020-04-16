@@ -5,7 +5,7 @@ export default {
   resolvers,
   typeDefs,
   cors: {
-    origin: '*',			// <- allow request from all domains
+    origin: '*',
     credentials: true
   },
   // context: () => {

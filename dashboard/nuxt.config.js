@@ -30,7 +30,7 @@ module.exports = {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: process.env.API_URL || 'http://localhost:4000'
+        httpEndpoint: process.env.API_URL || 'http://localhost:9000/.netlify/functions/main'
       }
     }
   },

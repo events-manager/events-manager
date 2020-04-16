@@ -1,4 +1,4 @@
-export { UserInputError } from 'apollo-server'
+import { UserInputError } from 'apollo-server'
 import eventsCollection from '../../data/events'
 
 /**

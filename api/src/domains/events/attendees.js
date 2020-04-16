@@ -1,4 +1,4 @@
-export { UserInputError } from 'apollo-server'
+import { UserInputError } from 'apollo-server'
 
 /**
  * An attendee is a person with a ticket that visits an event

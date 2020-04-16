@@ -1,4 +1,4 @@
-export { UserInputError } from 'apollo-server'
+import { UserInputError } from 'apollo-server'
 
 /**
  * A participant is a person that has a specific role at an event.

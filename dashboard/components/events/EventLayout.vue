@@ -1,4 +1,3 @@
-import gql from "graphql-tag"
 <template>
   <domain-layout>
     <domain-sidebar>
@@ -80,9 +79,4 @@ export default {
 </script>
 
 <style scoped>
-.icon {
-  display: block;
-  margin-left: -20px;
-  margin-right: 10px;
-}
 </style>
