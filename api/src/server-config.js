@@ -4,6 +4,7 @@ import typeDefs from './schema.gql'
 export default {
   resolvers,
   typeDefs,
+  cors: false,
   // context: () => {
   //   // console.log(context)
   //   // Note! This example uses the `req` object to access headers,
