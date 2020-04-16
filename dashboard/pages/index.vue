@@ -1,7 +1,7 @@
 <template>
-  <base-page-layout>
+  <context-layout>
     <p>Content goes here!</p>
-  </base-page-layout>
+  </context-layout>
 </template>
 
 <script>
