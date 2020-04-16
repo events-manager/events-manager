@@ -1,25 +1,29 @@
 import gql from "graphql-tag"
 <template>
-  <context-layout>
-    <sub-sidebar>
-      <h1 v-if="event" slot="header">{{ event.name }}</h1>
+  <domain-layout>
+    <domain-sidebar>
+      <sidebar-header>
+        <sidebar-title v-if="event">{{ event.name }}</sidebar-title>
+      </sidebar-header>
 
-      <sub-sidebar-nav>
-        <sub-sidebar-nav-item
-          v-for="{ to, title, icon } in navItems"
-          :key="to"
-          :to="to"
-        >
-          <span class="icon" :class="icon" />
-          {{ title }}
-        </sub-sidebar-nav-item>
-      </sub-sidebar-nav>
-    </sub-sidebar>
+      <sidebar-body>
+        <sidebar-nav>
+          <sidebar-nav-item
+            v-for="{ to, title, icon } in navItems"
+            :key="to"
+            :to="to"
+          >
+            <span class="icon" :class="icon" />
+            {{ title }}
+          </sidebar-nav-item>
+        </sidebar-nav>
+      </sidebar-body>
+    </domain-sidebar>
 
     <page-layout>
       <slot />
     </page-layout>
-  </context-layout>
+  </domain-layout>
 </template>
 
 <script>
@@ -80,8 +84,5 @@ export default {
   display: block;
   margin-left: -20px;
   margin-right: 10px;
-}
-h1 {
-  font-size: 1.7em;
 }
 </style>

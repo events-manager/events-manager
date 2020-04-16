@@ -9,8 +9,6 @@
 </template>
 
 <script>
-import gql from 'graphql-tag'
-
 export default {
   components: {
     EventLayout: () => import('~/components/events/EventLayout')

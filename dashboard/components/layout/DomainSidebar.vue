@@ -1,12 +1,6 @@
 <template>
   <div class="domain-sidebar">
-    <sidebar-header>
-      <slot name="header" />
-    </sidebar-header>
-
-    <div class="body">
-      <slot />
-    </div>
+    <slot />
   </div>
 </template>
 
@@ -26,8 +20,5 @@ export default {
   box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
   border-bottom-right-radius: 10px;
   border-top-right-radius: 10px;
-}
-.body {
-  padding: 20px;
 }
 </style>

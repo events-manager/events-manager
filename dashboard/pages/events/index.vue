@@ -1,5 +1,8 @@
 <template>
-  <context-layout title="Events">
+  <domain-layout title="Events">
+    <sub-sidebar>
+
+    </sub-sidebar>
     <page-layout>
       <header>
         <h1>Events</h1>
@@ -11,7 +14,7 @@
         </nuxt-link>
       </section>
     </page-layout>
-  </context-layout>
+  </domain-layout>
 </template>
 
 <script>
