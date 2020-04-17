@@ -31,7 +31,9 @@ export const event = async (_, { id, slug, brandSlug }, context) => {
   }
 
   if (slug) {
-    return eventsCollection.find((event) => event.slug === slug)
+    return context.dataSources.events.getBySlug(slug)
+
+    // return eventsCollection.find((event) => event.slug === slug)
   }
 
   if (brandSlug) {

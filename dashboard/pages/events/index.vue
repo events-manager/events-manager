@@ -15,7 +15,12 @@
       <page-header />
 
       <base-grid>
-        <nuxt-link v-for="{ id, slug, name } in events" :key="id" class="card" :to="`/events/${slug}`">
+        <nuxt-link
+          v-for="{ id, slug, name } in events"
+          :key="id"
+          class="card"
+          :to="`/events/${slug}`"
+        >
           {{ name }}
         </nuxt-link>
       </base-grid>

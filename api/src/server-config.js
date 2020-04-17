@@ -1,5 +1,9 @@
-import resolvers from './domains'
+import './db'
+import resolvers from './resolvers'
 import typeDefs from './schema.gql'
+
+import Events from './collections/events'
+import EventModel from './models/event'
 
 export default {
   resolvers,
@@ -7,6 +11,17 @@ export default {
   cors: {
     origin: '*',
     credentials: true
+  },
+  dataSources: () => ({
+    events: new Events(EventModel)
+    // OR
+    // users: new Users(UserModel)
+  }),
+  introspection: true,
+  playground: {
+    settings: {
+      'editor.theme': 'light'
+    }
   },
   // context: () => {
   //   // console.log(context)
@@ -29,10 +44,4 @@ export default {
   //   // add the user to the context
   //   return { user }
   // },
-  introspection: true,
-  playground: {
-    settings: {
-      'editor.theme': 'light'
-    }
-  }
 }
