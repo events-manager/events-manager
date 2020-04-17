@@ -5,4 +5,9 @@ import serverConfig from '../server-config'
 
 const server = new ApolloServer(serverConfig)
 
-exports.handler = server.createHandler()
+exports.handler = server.createHandler({
+  cors: {
+    origin: '*',
+    credentials: true
+  }
+})
