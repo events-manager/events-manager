@@ -1,3 +1,15 @@
+const getApiUrl = () => {
+  if (process.env.API_URL) {
+    return process.env.API_URL
+  }
+
+  if (process.env.npm_config_lambda) {
+    return 'http://localhost:9000/.netlify/functions/main'
+  }
+
+  return 'http://localhost:4000'
+}
+
 // eslint-disable-next-line nuxt/no-cjs-in-config
 module.exports = {
   mode: 'spa',
@@ -30,11 +42,12 @@ module.exports = {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: process.env.API_URL || 'http://localhost:9000/.netlify/functions/main'
+        httpEndpoint: getApiUrl()
       }
     }
   },
   build: {
-    extend(config, ctx) {}
+    extend(config, ctx) {
+    }
   }
 }
