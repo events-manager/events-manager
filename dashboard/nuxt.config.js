@@ -38,6 +38,9 @@ module.exports = {
   ],
   buildModules: [],
   modules: ['@nuxtjs/apollo', 'portal-vue/nuxt', 'nuxt-buefy'],
+  generate: {
+    fallback: true
+  },
 
   apollo: {
     clientConfigs: {
