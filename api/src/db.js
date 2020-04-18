@@ -21,5 +21,5 @@ connection.then((db) => db).catch((err) => {
   // eslint-disable-next-line no-console
   console.log(err)
 })
-
+console.log('Connection', connection)
 export default connection
