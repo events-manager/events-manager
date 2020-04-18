@@ -1,4 +1,4 @@
-import { people } from './resolvers/people';
+import { people } from './resolvers/people'
 
 export const resolvers = {
   Query: {

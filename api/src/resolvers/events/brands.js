@@ -1,10 +1,7 @@
 import { UserInputError } from 'apollo-server'
-import brandsCollection from '../../data/brands';
+import brandsCollection from '../../data/brands'
 
-export const brands = async (_, {}, context) => {
-
-  return brandsCollection;
-}
+export const brands = async (_, {}, context) => brandsCollection
 
 export const brand = async (_, { id, slug }, context) => {
   if (!id && !slug) {
@@ -12,12 +9,9 @@ export const brand = async (_, { id, slug }, context) => {
   }
 
   if (slug) {
-    return brandsCollection.find(brand => brand.slug === slug);
+    return brandsCollection.find((brand) => brand.slug === slug)
     // Return the current event
   }
 
-  return brandsCollection.find(brand => brand.id === id);
+  return brandsCollection.find((brand) => brand.id === id)
 }
-
-
-

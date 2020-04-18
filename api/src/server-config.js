@@ -1,4 +1,4 @@
-import './db'
+import getConnection from './db'
 import resolvers from './resolvers'
 import typeDefs from './schema.gql'
 
@@ -12,19 +12,25 @@ export default {
     origin: '*',
     credentials: true
   },
-  dataSources: () => {
-    return {
-      events: new Events(EventModel)
-      // OR
-      // users: new Users(UserModel)
-    }
-  },
+  dataSources: () => ({
+    events: new Events(EventModel)
+    // OR
+    // users: new Users(UserModel)
+  }),
   introspection: true,
   playground: {
     settings: {
       'editor.theme': 'light'
     }
   },
+  context: async () => {
+    const dbConnection = await getConnection()
+
+    return {
+      dbConnection
+    }
+  }
+
   // context: () => {
   //   // console.log(context)
   //   // Note! This example uses the `req` object to access headers,

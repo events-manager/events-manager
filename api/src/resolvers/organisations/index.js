@@ -1,4 +1,4 @@
-import { sponsorships, event } from './resolvers/sponsorships';
+import { sponsorships, event } from './resolvers/sponsorships'
 import { organisation, organisations } from './resolvers/organisations'
 
 

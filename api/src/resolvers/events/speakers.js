@@ -6,12 +6,6 @@ import peopleCollection from '../../data/people'
  * Speakers could be associated with 0 or more talks
  * Zero talks is only possible if the speaker did for example not yet provide a 'talk topic'.
  */
-export const speakers = async (event, {}, context) => {
-  return speakersCollection.filter(speaker => speaker.eventId === event.id)
-}
+export const speakers = async (event, {}, context) => speakersCollection.filter((speaker) => speaker.eventId === event.id)
 
-export const person = async (speaker, {}, context) => {
-  return peopleCollection.find(person => speaker.personId === person.id)
-}
-
-
+export const person = async (speaker, {}, context) => peopleCollection.find((person) => speaker.personId === person.id)

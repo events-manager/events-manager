@@ -6,6 +6,7 @@ const eventSchema = new Schema({
   name: String,
   brandSlug: String,
   venueId: String,
+  isCurrent: Boolean,
   startsAt: Date,
   endsAt: Date
 })

@@ -6,7 +6,7 @@ export default [{
   picture: '',
   createdAt: '2020-02-28T22:12:14+00:00',
   updatedAt: '2020-02-28T22:12:14+00:00'
-},{
+}, {
   id: 'mtrejkahfhghgggd',
   firstName: 'Sarah',
   lastName: 'Drasner',
