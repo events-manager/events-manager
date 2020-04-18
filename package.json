@@ -8,7 +8,7 @@
     "dev": "npm-run-all -p dev:api dev:dashboard",
     "dev:lambda": "npm-run-all -p dev:api:lambda dev:dashboard:lambda",
     "install": "npm-run-all -p install:api install:dashboard install:docs",
-    "build": "npm run build:api && npm run build:dashboard && npm run deploy",
+    "build": "npm run build:api && npm run build:dashboard",
     "dev:docs": "cd ./api && npm run dev",
     "dev:api": "cd ./api && npm run dev",
     "dev:api:lambda": "cd ./api && npm run dev:lambda",

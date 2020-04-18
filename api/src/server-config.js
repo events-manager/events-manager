@@ -12,11 +12,13 @@ export default {
     origin: '*',
     credentials: true
   },
-  dataSources: () => ({
-    events: new Events(EventModel)
-    // OR
-    // users: new Users(UserModel)
-  }),
+  dataSources: () => {
+    return {
+      events: new Events(EventModel)
+      // OR
+      // users: new Users(UserModel)
+    }
+  },
   introspection: true,
   playground: {
     settings: {
