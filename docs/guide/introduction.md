@@ -28,7 +28,32 @@ npm run dev
 
 - The dashboard will run on http://localhost:3000.
 - It will connect to the API which is running on http://localhost:4000
+- The API will automatically connect to a test Mongo database that runs in the Mongo Cloud
 - The docs will run on http://localhost:8080
+
+### Setting up your own database
+A local database allows you to work offline and experiment with the data without affecting other 
+developers. Simply follow the steps in the [mongo documentation]() for your OS.
+
+Add the MONGO_URL to your environment variables. It should have this format:
+
+```
+mongodb+srv://{username}:{password}@{server}/{dbname}?retryWrites=true&w=majority
+```
+
+> Note that the password should be urlencoded if it has special characters. The server will likely be 
+> `localhost:27017`
+
+If that's done, test the connection by running `npm run dev`. Everything should work, but 
+of course there will be no data yet. 
+
+Seed your own database 
+```
+npm run seed
+``` 
+
+This will fill the database with data for the most common scenarios. Note that this script will 
+also run during CI to provide test scenarios for end to end tests
 
 ### Running the serverless setup locally
 

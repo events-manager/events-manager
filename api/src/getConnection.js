@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 mongoose.Promise = global.Promise
 
 // TODO TMP Hardcoded connection.. db will change anyway
-const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://cloudspider:Oxt8G0EYtZp1CLQ1@gather-ww7jx.mongodb.net/gather?retryWrites=true&w=majority'
+const MONGO_URI = process.env.MONGO_URL || 'mongodb+srv://cloudspider:Oxt8G0EYtZp1CLQ1@gather-ww7jx.mongodb.net/gather?retryWrites=true&w=majority'
 
 let connection = null
 

@@ -21,6 +21,7 @@
     "build:api": "cd ./api && npm run build",
     "build:dashboard": "cd ./dashboard && npm run build",
     "deploy": "sh ./scripts/deploy.sh",
+    "seed": "cd api && npm run seed",
     "reset": "sh ./scripts/reset.sh"
   },
   "author": "Chris <info@cloudspider.io>",
