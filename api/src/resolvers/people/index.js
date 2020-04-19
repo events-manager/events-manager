@@ -1,6 +1,6 @@
-import { people } from './resolvers/people'
+import people from './people'
 
-export const resolvers = {
+export default {
   Query: {
     people
   },

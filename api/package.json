@@ -9,6 +9,7 @@
     "build": "netlify-lambda build --config ./webpack.lambda.js src/lambda",
     "dev:lambda": "netlify-lambda serve --config ./webpack.lambda.js src/lambda",
     "postinstall": "netlify-lambda install",
+    "seed": "babel-node seeder/seed.js",
     "lint": "eslint . --fix"
   },
   "keywords": [],

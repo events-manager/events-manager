@@ -1,3 +1,3 @@
-import venuesCollectiob from '../../data/venues'
+import collection from '../../data/venues'
 
-export const venue = async (event, {}, context) => venuesCollectiob.find((venue) => venue.id === event.venueId)
+export default async (event) => collection.find((venue) => venue.id === event.venueId)

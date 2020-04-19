@@ -1,20 +1,29 @@
-import { event, events } from './events'
-import { brand, brands } from './brands'
-import { sponsors, organisation } from './sponsors'
-import { speakers, person } from './speakers'
-import { venue } from './venue'
+import event from './event'
+import events from './events'
+import brand from './brand'
+import brands from './brands'
+import eventBrand from './eventBrand'
+import sponsors from './sponsors'
+import organisation from './organisation'
+import speakers from './speakers'
+import person from './person'
+import venue from './venue'
 
 export default {
   Query: {
-    brand,
-    brands,
     event,
-    events
+    events,
+    brand,
+    brands
   },
   Event: {
+    brand: eventBrand,
     sponsors,
     speakers,
     venue
+  },
+  Brand: {
+    events
   },
   Sponsor: {
     organisation

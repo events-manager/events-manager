@@ -1,6 +1,6 @@
 import { MongoDataSource } from 'apollo-datasource-mongodb'
 
-export default class Events extends MongoDataSource {
+export default class Brands extends MongoDataSource {
   getById(id) {
     if (!id) {
       throw new Error('Missing parameter: "id" is required')
@@ -17,9 +17,5 @@ export default class Events extends MongoDataSource {
 
   getAll(selector) {
     return this.model.find(selector)
-  }
-
-  getCurrent() {
-    return this.model.find({ isCurrent: true })
   }
 }

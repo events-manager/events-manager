@@ -1,8 +1,10 @@
-import { sponsorships, event } from './resolvers/sponsorships'
-import { organisation, organisations } from './resolvers/organisations'
+import sponsorships from './sponsorships'
+import event from './event'
+import organisation from './organisation'
+import organisations from './organisations'
 
 
-export const resolvers = {
+export default {
   Query: {
     organisation,
     organisations

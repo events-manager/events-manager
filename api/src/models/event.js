@@ -9,6 +9,6 @@ const eventSchema = new Schema({
   isCurrent: Boolean,
   startsAt: Date,
   endsAt: Date
-})
+}, { collection: 'events' })
 
 export default mongoose.model('event', eventSchema)

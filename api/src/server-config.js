@@ -1,22 +1,16 @@
-import getConnection from './db'
+import getConnection from './getConnection'
 import resolvers from './resolvers'
 import typeDefs from './schema.gql'
-
-import Events from './collections/events'
-import EventModel from './models/event'
+import dataSources from './dataSources'
 
 export default {
   resolvers,
   typeDefs,
+  dataSources,
   cors: {
     origin: '*',
     credentials: true
   },
-  dataSources: () => ({
-    events: new Events(EventModel)
-    // OR
-    // users: new Users(UserModel)
-  }),
   introspection: true,
   playground: {
     settings: {

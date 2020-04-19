@@ -1,4 +1,3 @@
-import { UserInputError } from 'apollo-server'
 
 /**
  * A participant is a person that has a specific role at an event.
@@ -6,12 +5,7 @@ import { UserInputError } from 'apollo-server'
  */
 export default {
   Query: {
-    participants: (_, { eventId }, context) => [],
-    participant: async (_, { eventId }, context) =>
-      // if (!id && !slug) {
-      //   throw new UserInputError(`slugOrIdRequired`)
-      // }
-      //
-      ({})
+    participants: () => [],
+    participant: async () => ({})
   }
 }
