@@ -5,11 +5,11 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "dev": "npm-run-all -p dev:api dev:dashboard",
+    "dev": "npm-run-all -p dev:api dev:dashboard dev:docs",
     "dev:lambda": "npm-run-all -p dev:api:lambda dev:dashboard:lambda",
     "install": "npm-run-all -p install:api install:dashboard install:docs",
     "build": "npm run build:api && npm run build:dashboard",
-    "dev:docs": "cd ./api && npm run dev",
+    "dev:docs": "cd ./docs && npm run dev",
     "dev:api": "cd ./api && npm run dev",
     "dev:api:lambda": "cd ./api && npm run dev:lambda",
     "dev:dashboard": "cd ./dashboard && npm run dev",

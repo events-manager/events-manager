@@ -57,6 +57,15 @@ module.exports = {
             '/guide/dashboard/getting-started',
             '/guide/dashboard/ui-composition'
           ]
+        },
+        {
+          title: 'API',
+          path: '/api',
+          collapsable: false,
+          sidebarDepth: 1,
+          children: [
+            '/guide/api/data-sources'
+          ]
         }
       ]
     }
